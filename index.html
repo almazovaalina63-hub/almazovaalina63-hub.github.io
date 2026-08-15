@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Элитные девушки в городах России — проверенные анкеты | LUX City</title>
+  <meta name="description" content="Элитные девушки и проверенные анкеты в городах России. Индивидуалки, эскорт, актуальные фото. Выберите город и переходите в Telegram-канал.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-32.png">
+  <meta name="theme-color" content="#1a1410">
+
+  <meta property="og:title" content="Элитные девушки — Выберите город | LUX City">
+  <meta property="og:description" content="Элитные девушки и проверенные анкеты по городам. Эстетика, приватность, актуальные фото в Telegram.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <style>
+    :root {
+      --bg: #f8f4ef;
+      --text: #1a1a1a;
+      --text-soft: #5c5c5c;
+      --accent: #b89b6a;
+      --accent-hover: #a08655;
+      --white: #ffffff;
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px 50px;
+      background-color: #1a1410;
+      background-image:
+        linear-gradient(180deg, rgba(20, 14, 10, 0.55) 0%, rgba(20, 14, 10, 0.72) 100%),
+        url("https://images.unsplash.com/photo-1618556450991-2f1af64e8191?w=1600&q=80");
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+    }
+
+    .label {
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      line-height: 1.15;
+      color: #fff;
+    }
+
+    .hero .subtitle {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 420px;
+      margin: 0 auto;
+    }
+
+    .sections {
+      padding: 40px 0 60px;
+      margin-top: -24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .block {
+      margin-bottom: 40px;
+    }
+
+    .block:last-child {
+      margin-bottom: 0;
+    }
+
+    .block-title {
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .block-desc {
+      font-size: 15px;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+    }
+
+    .cities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+
+    .city-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+      border: 1px solid transparent;
+    }
+
+    .city-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+      border-color: rgba(184, 155, 106, 0.35);
+    }
+
+    .city-name {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .city-arrow {
+      color: var(--accent);
+      font-size: 18px;
+      transition: transform 0.25s ease;
+    }
+
+    .city-card:hover .city-arrow {
+      transform: translateX(4px);
+    }
+
+    .note {
+      text-align: center;
+      padding: 10px 20px 40px;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 13px;
+      color: #999;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: 300px;
+        padding: 60px 20px 40px;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .sections {
+        padding: 28px 0 40px;
+        margin-top: -16px;
+      }
+
+      .cities-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .city-card {
+        padding: 16px 18px;
+      }
+    }
+  </style>
+
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111625187', 'ym');
+    ym(111625187, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/111625187" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="label">LUX City · Премиум · Эстетика</div>
+      <h1>Элитные девушки</h1>
+      <p class="subtitle">Выберите город и переходите в канал с актуальными анкетами</p>
+    </div>
+  </section>
+
+  <section class="sections">
+    <div class="container">
+
+      <!-- Блок 1 -->
+      <div class="block">
+        <div class="block-title">Подборка · Premium</div>
+        <div class="block-desc">Элитные и проверенные анкеты</div>
+        <div class="cities-grid">
+          <a href="/nizhniy-novgorod/" class="city-card"><span class="city-name">Нижний Новгород</span><span class="city-arrow">→</span></a>
+          <a href="/chelyabinsk/" class="city-card"><span class="city-name">Челябинск</span><span class="city-arrow">→</span></a>
+          <a href="/samara/" class="city-card"><span class="city-name">Самара</span><span class="city-arrow">→</span></a>
+          <a href="/ufa/" class="city-card"><span class="city-name">Уфа</span><span class="city-arrow">→</span></a>
+          <a href="/rostov/" class="city-card"><span class="city-name">Ростов-на-Дону</span><span class="city-arrow">→</span></a>
+          <a href="/omsk/" class="city-card"><span class="city-name">Омск</span><span class="city-arrow">→</span></a>
+          <a href="/krasnodar/" class="city-card"><span class="city-name">Краснодар</span><span class="city-arrow">→</span></a>
+          <a href="/voronezh/" class="city-card"><span class="city-name">Воронеж</span><span class="city-arrow">→</span></a>
+          <a href="/perm/" class="city-card"><span class="city-name">Пермь</span><span class="city-arrow">→</span></a>
+          <a href="/volgograd/" class="city-card"><span class="city-name">Волгоград</span><span class="city-arrow">→</span></a>
+          <a href="/saratov/" class="city-card"><span class="city-name">Саратов</span><span class="city-arrow">→</span></a>
+          <a href="/tyumen/" class="city-card"><span class="city-name">Тюмень</span><span class="city-arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- Блок 2 -->
+      <div class="block">
+        <div class="block-title">Анкеты</div>
+        <div class="block-desc">Актуальные подборки по городам</div>
+        <div class="cities-grid">
+          <a href="/ankety/novosibirsk/" class="city-card"><span class="city-name">Новосибирск</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/ekaterinburg/" class="city-card"><span class="city-name">Екатеринбург</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/kazan/" class="city-card"><span class="city-name">Казань</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/krasnoyarsk/" class="city-card"><span class="city-name">Красноярск</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/nizhniy-novgorod/" class="city-card"><span class="city-name">Нижний Новгород</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/samara/" class="city-card"><span class="city-name">Самара</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/ufa/" class="city-card"><span class="city-name">Уфа</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/rostov/" class="city-card"><span class="city-name">Ростов-на-Дону</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/omsk/" class="city-card"><span class="city-name">Омск</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/krasnodar/" class="city-card"><span class="city-name">Краснодар</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/voronezh/" class="city-card"><span class="city-name">Воронеж</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/perm/" class="city-card"><span class="city-name">Пермь</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/volgograd/" class="city-card"><span class="city-name">Волгоград</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/saratov/" class="city-card"><span class="city-name">Саратов</span><span class="city-arrow">→</span></a>
+          <a href="/ankety/tyumen/" class="city-card"><span class="city-name">Тюмень</span><span class="city-arrow">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="note">
+    Только 18+ · Полная конфиденциальность
+  </div>
+
+  <footer>
+    18+ · Все модели совершеннолетние · Контент предназначен только для взрослых
+  </footer>
+
+</body>
+</html>
