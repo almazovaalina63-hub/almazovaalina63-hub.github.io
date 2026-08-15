@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Анкеты Нижнего Новгорода — актуальные фото | LUX City</title>
+  <meta name="description" content="Анкеты Нижнего Новгорода: актуальные фото, индивидуалки, без посредников. Смотрите подборку в Telegram-канале.">
+  <meta name="keywords" content="анкеты Нижнего Новгорода, индивидуалки Нижний Новгород, проститутки Нижний Новгород, снять девушку Нижний Новгород">
+  <meta name="robots" content="index, follow">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon-32.png">
+  <meta name="theme-color" content="#f8f4ef">
+
+  <meta property="og:title" content="Анкеты Нижнего Новгорода — актуальные фото">
+  <meta property="og:description" content="Актуальные анкеты и индивидуалки в Нижнем Новгороде. Фото, приватность. Переходите в Telegram.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+
+  <style>
+    :root {
+      --bg: #f8f4ef;
+      --text: #1a1a1a;
+      --text-soft: #5c5c5c;
+      --accent: #b89b6a;
+      --accent-hover: #a08655;
+      --white: #ffffff;
+      --radius: 20px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 60px 0 40px;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 480px;
+    }
+
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      color: var(--text-soft);
+      text-decoration: none;
+      margin-bottom: 22px;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+    .back-link span {
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .label {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+    }
+
+    h1 span {
+      color: var(--accent);
+      display: block;
+    }
+
+    .hero-text {
+      font-size: 17px;
+      color: var(--text-soft);
+      margin-bottom: 32px;
+      max-width: 420px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 36px;
+      border-radius: 50px;
+      transition: all 0.25s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(184, 155, 106, 0.3);
+    }
+
+    .btn-wrap {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-sub {
+      display: block;
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--text-soft);
+      text-align: center;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    /* Slider */
+    .slider {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+      aspect-ratio: 4 / 5;
+      background: #e8e0d5;
+      user-select: none;
+    }
+
+    .slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.85);
+      color: #1a1a1a;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .slider-btn:hover {
+      background: #fff;
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    .slider-btn.prev { left: 12px; }
+    .slider-btn.next { right: 12px; }
+
+    .dots {
+      position: absolute;
+      bottom: 14px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      z-index: 5;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: none;
+      padding: 0;
+      background: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .dot.active {
+      background: #fff;
+      transform: scale(1.2);
+    }
+
+
+
+    .features {
+      padding: 70px 0 50px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .feature {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    .feature-icon {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: var(--accent);
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .feature p {
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    .about {
+      padding: 30px 0 70px;
+    }
+
+    .about-box {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 40px;
+      max-width: 720px;
+      margin: 0 auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+
+    .about-box h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .about-box p {
+      font-size: 16px;
+      color: var(--text-soft);
+      margin-bottom: 14px;
+    }
+
+    .about-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .cta {
+      padding: 20px 0 90px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: var(--text-soft);
+      margin-bottom: 28px;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 13px;
+      color: #999;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        min-height: auto;
+        padding: 40px 0 30px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-content {
+        max-width: 100%;
+        text-align: center;
+        order: 2;
+      }
+
+      .back-link {
+        justify-content: center;
+        width: 100%;
+      }
+
+
+      .hero-image {
+        order: 1;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-box {
+        padding: 28px 22px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 17px 24px;
+      }
+
+      .slider-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <a href="/" class="back-link"><span>←</span> Все города</a>
+          <div class="label">LUX City · Премиум · Эстетика</div>
+          <h1>Анкеты<br><span>Нижнего Новгорода</span></h1>
+          <p class="hero-text">
+            Анкеты Нижнего Новгорода с актуальными фото. Прямой доступ в Telegram.
+          </p>
+          <div class="btn-wrap">
+            <a href="https://t.me/prostitutki_nnov" class="btn" target="_blank" rel="noopener">
+              Смотреть в Telegram
+            </a>
+            <span class="btn-sub">Переход без регистрации · 18+</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="slider" id="slider">
+            <div class="slides">
+            <div class="slide active"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=800&q=80" alt="Элитные девушки — фото 1" width="600" height="750"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800&q=80" alt="Элитные девушки — фото 2" width="600" height="750"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800&q=80" alt="Элитные девушки — фото 3" width="600" height="750"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&q=80" alt="Элитные девушки — фото 4" width="600" height="750"></div>
+            </div>
+            <button type="button" class="slider-btn prev" aria-label="Предыдущее">‹</button>
+            <button type="button" class="slider-btn next" aria-label="Следующее">›</button>
+            <div class="dots">
+            <button type="button" class="dot active" data-index="0" aria-label="Фото 1"></button>
+            <button type="button" class="dot" data-index="1" aria-label="Фото 2"></button>
+            <button type="button" class="dot" data-index="2" aria-label="Фото 3"></button>
+            <button type="button" class="dot" data-index="3" aria-label="Фото 4"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">✦</div>
+          <h3>Премиум качество</h3>
+          <p>Эстетика в каждой детали</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">◈</div>
+          <h3>Конфиденциальность</h3>
+          <p>Полная приватность</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">★</div>
+          <h3>Актуальные анкеты</h3>
+          <p>Только свежие фото</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">♡</div>
+          <h3>Индивидуальный подход</h3>
+          <p>Настоящая атмосфера</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <div class="about-box">
+        <h2>Анкеты Нижнего Новгорода — актуальные фото</h2>
+        <p>
+          Отдельный канал по Нижнему: свежие анкеты, без серых схем и бесконечного спама. Только то, что можно быстро посмотреть.
+        </p>
+        <p>
+          Индивидуалки Нижнего Новгорода в подборке с упором на актуальность снимков. Материалы 18+.
+        </p>
+        <p>
+          Открыли Telegram — сразу внутри. Регистрация не нужна.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Смотрите актуальные анкеты</h2>
+      <p>Смотрите анкеты Нижнего Новгорода</p>
+      <a href="https://t.me/prostitutki_nnov" class="btn" target="_blank" rel="noopener">
+        Перейти в Telegram
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    18+ · Все модели совершеннолетние · Контент предназначен только для взрослых · <a href="/" style="color:inherit;text-decoration:underline;">Все города</a>
+  </footer>
+
+
+  <script>
+  (function () {
+    var slider = document.getElementById('slider');
+    if (!slider) return;
+    var slides = slider.querySelectorAll('.slide');
+    var dots = slider.querySelectorAll('.dot');
+    var prev = slider.querySelector('.prev');
+    var next = slider.querySelector('.next');
+    var total = slides.length;
+    var index = 0;
+    var timer = null;
+    var delay = 4000;
+
+    function show(i) {
+      index = (i + total) % total;
+      for (var s = 0; s < total; s++) {
+        slides[s].classList.toggle('active', s === index);
+        if (dots[s]) dots[s].classList.toggle('active', s === index);
+      }
+    }
+
+    function nextSlide() { show(index + 1); }
+    function prevSlide() { show(index - 1); }
+
+    function start() {
+      stop();
+      timer = setInterval(nextSlide, delay);
+    }
+
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    if (next) next.addEventListener('click', function () { nextSlide(); start(); });
+    if (prev) prev.addEventListener('click', function () { prevSlide(); start(); });
+
+    for (var d = 0; d < dots.length; d++) {
+      (function (di) {
+        dots[di].addEventListener('click', function () {
+          show(di);
+          start();
+        });
+      })(d);
+    }
+
+    slider.addEventListener('mouseenter', stop);
+    slider.addEventListener('mouseleave', start);
+    slider.addEventListener('touchstart', stop, { passive: true });
+    slider.addEventListener('touchend', start, { passive: true });
+
+    start();
+  })();
+  </script>
+
+</body>
+</html>
