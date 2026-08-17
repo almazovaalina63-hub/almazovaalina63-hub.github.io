@@ -26,13 +26,19 @@
       -webkit-font-smoothing: antialiased; min-height: 100vh;
     }
     .hero {
-      position: relative; min-height: 340px; display: flex; align-items: center; justify-content: center;
-      text-align: center; padding: 70px 20px 50px; background-color: #1a1410;
+      position: relative;
+      min-height: 520px;          /* было ~340 — сделай выше */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px 60px;
+      background-color: #1a1410;
       background-image:
-                 linear-gradient(180deg, rgba(18, 12, 10, 0.48) 0%, rgba(18, 12, 10, 0.75) 100%),
+                linear-gradient(180deg, rgba(18, 12, 10, 0.45) 0%, rgba(18, 12, 10, 0.72) 100%),
       url("ChatGPT Image Aug 17, 2026, 02_57_48 PM.png");
       background-size: cover;
-      background-position: center center;
+      background-position: center top;  /* ключевое: лицо сверху в кадре */
       background-repeat: no-repeat;
       color: #fff;
     }
